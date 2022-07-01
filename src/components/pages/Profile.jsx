@@ -139,7 +139,7 @@ export default function Profile({
 
   const modalButton = (
     <button
-      className='shadow-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-0.5 hover:scale-110 hover:bg-pink-400 duration-300 flex gap-x-3 row-reverse bg-purple-400 rounded-lg p-3 font-bold text-white mt-2'
+      className='shadow-lg transition ease-in-out delay-150 bg-purple-400 hover:-translate-y-0.5 hover:scale-110 hover:bg-pink-400 duration-300 flex gap-x-3 row-reverse rounded-lg p-3 font-bold text-white mt-2'
       onClick={() => setModalToggle(!modalToggle)}
     >
       Upload a picture <PhotographIcon className='h-5 w-5 text-white' />
