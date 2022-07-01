@@ -185,15 +185,19 @@ export default function Profile({
           <div className='bg-gray-300 p-5 rounded-xl'>
             <form onSubmit={formSubmit} className='flex items-center space-x-6'>
               <div className='shrink-0'>
-                <img
-                  className='h-40 w-40 object-cover rounded-full'
-                  src={
-                    userProfile.profilePicture
-                      ? `https://res.cloudinary.com/dshcawt4j/image/upload/v1593119998/${userProfile.profilePicture}.png`
-                      : 'avataricon.png'
-                  }
-                  alt='profileplacholder'
-                />
+              {userProfile.profilePicture ? (
+                  <img
+                    className='h-40 w-40 object-cover rounded-full'
+                    src={`https://res.cloudinary.com/dshcawt4j/image/upload/v1593119998/${userProfile.profilePicture}.png`}
+                    alt='profilePic'
+                  />
+                ) : (
+                  <img
+                    src='avataricon.png'
+                    className='h-40 w-40 object-cover rounded-full'
+                    alt='placeholder'
+                  />
+                )}
               </div>
               <input
                 id='profilePic'
