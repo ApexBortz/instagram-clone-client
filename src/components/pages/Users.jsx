@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import UserDisplay from '../UserDisplay'
+import { GlobeIcon } from '@heroicons/react/outline'
 
 // display of the users
 const serverUrl = `${process.env.REACT_APP_SERVER_URL}`
@@ -31,7 +32,7 @@ export default function Users({ currentUser }) {
           <div>
             {pictures.length !== 0 ? (
               <div key={user._id}>
-                <Link to={`/users/${user._id}`}>
+                <Link to={`/users/${user._id}`} >
                   <UserDisplay user={user} />
                 </Link>
               </div>
@@ -49,9 +50,10 @@ export default function Users({ currentUser }) {
         <div className='grid gap-8 items-start justify-center'>
           <div className='relative'>
             <div className='absolute inset-1 bg-gray-600 blur-xl'></div>
-            <div className=' relative px-7 py-4  bg-black rounded-lg leading-none flex items-center'>
+            <div className=' relative px-7 py-4  bg-gray-700 rounded-lg leading-none flex items-center'>
               <span className='flex items-center space-x-5'></span>
-              <span className='text-gray-100 text-xl'>List Of Users</span>
+              <span className='text-gray-100 font-bold text-xl'>All Users</span> 
+              <GlobeIcon className='ml-5 h-6 w 6 text-white' />
             </div>
           </div>
         </div>

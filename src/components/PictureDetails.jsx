@@ -10,6 +10,7 @@
 
 import { useState } from 'react'
 import PictureModal from './PictureModal'
+import { ChatAltIcon } from '@heroicons/react/outline'
 
 export default function PictureDetails({
   picture: { cloudId, caption },
@@ -25,21 +26,24 @@ export default function PictureDetails({
 
   return (
 
-    <div className=" ">
-      <div className="m-10">
+    <div>
+      <div className="mt-10 mx-10 mb-6">
 
         <div className={blurToggle ? 'blur ' : null}>
           <img
-            onClick={() => {
-              setModalToggle(!modalToggle)
-              setBlurToggle(!blurToggle)
-            }}
-            className='border bg-gray-200 shadow-2xl'
+            className='bg-black shadow-2xl rounded-xl'
             src={`https://res.cloudinary.com/dshcawt4j/image/upload/w_450,h_250,c_scale/${cloudId}.png`}
             alt='cloudId'
           />
-          <p>{caption}</p>
-
+          <p className='pt-4 font-bold text-center'>{caption}</p>
+        <div className='flex flex-row-reverse'>
+          <button onClick={() => {
+              setModalToggle(!modalToggle)
+              setBlurToggle(!blurToggle)
+            }} className='shadow-lg bg-orange-300 rounded-lg p-2 ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 duration-300'> 
+               <ChatAltIcon className='justify-center h-8 w-8 text-white ease-in-out delay-100 hover:text-purple-400 hover:scale-110 duration-300' />
+            </button>
+        </div>
         </div>
 
         {modalToggle ? (

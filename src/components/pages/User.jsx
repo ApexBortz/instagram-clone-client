@@ -55,9 +55,9 @@ export default function User({ currentUser }) {
   return (
     <div className=''>
       <div className={blurToggle ? 'blur ' : null}>
-        <div className='  bg-white flex flex-col justify-center items-center '>
+        <div className='mt-10 bg-white flex flex-col justify-center items-center '>
           <div className='bg-gray-100 rounded-xl mb-5 w-200 p-10 flex flex-col items-center shadow-lg'>
-            <h1 className='font-bold text-3xl font-sans'>{userProfile.name}</h1>
+            <h1 className='font-bold text-3xl font-sans pb-4'>{userProfile.name}</h1>
             {userProfile ? (
               userProfile.profilePicture ? (
                 <img
@@ -79,7 +79,7 @@ export default function User({ currentUser }) {
         </div>
       </div>
 
-      <div className='grid grid-cols-3 '>{allUserPictures}</div>
+      <div className='grid grid-cols-3 px-5'>{allUserPictures}</div>
     </div>
   )
 }
