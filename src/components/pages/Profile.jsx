@@ -164,7 +164,7 @@ export default function Profile({
           />
           <p className="text-center font-bold">{caption}</p>
           <button
-            className='mt-3 ml-64 flex gap-x-2 row-reverse bg-red-500 p-2 rounded-lg mb-3 font-bold text-white hover:-translate-y-0.5 hover:scale-110 hover:bg-orange-400 duration-300'
+            className='mt-3 ml-56 flex gap-x-2 row-reverse bg-red-500 p-2 rounded-lg mb-3 font-bold text-white hover:-translate-y-0.5 hover:scale-110 hover:bg-orange-400 duration-300'
             onClick={() => handleDeletePost(_id)}
           >
             Delete Picture <TrashIcon className="h-5 w-5 text-white" />
